@@ -6,15 +6,22 @@ class OptionButton extends StatelessWidget {
   final void Function() onTap;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
+    return Container(
+      margin: const EdgeInsets.symmetric(
+        vertical: 10,
+      ),
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.purple,
-          foregroundColor: Colors.white,
-          padding: const EdgeInsets.symmetric(vertical: 10),
-        ),
         onPressed: onTap,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color.fromARGB(255, 73, 7, 144),
+          foregroundColor: Colors.white,
+          padding: const EdgeInsets.symmetric(
+            vertical: 15,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
         child: Text(
           option,
           textAlign: TextAlign.center,
